@@ -24,12 +24,10 @@ body {
   display: grid;
   place-content: center;
   /* Custom text and stuff */
-  background: #0033a0;
-  color: white;
-  font-family: Futura;
-  font-weight: bold;
-  font-size: 70px;
-  text-align: center;
+  background-image: url('vidss/Untitled.mp4');
+  background-position: center;
+  background-size: cover;
+  background-repeat: ;
 }
 .hero a {
   color: white;
