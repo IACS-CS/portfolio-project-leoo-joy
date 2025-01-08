@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Cookie&family=Genos:ital,wght@0,100..900;1,100..900&family=Iceland&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Megrim&family=Meow+Script&family=Moirai+One&family=Nuosu+SIL&display=swap');
 /* There's some sample CSS here which you can use or nuke as you like */
 
 html {
@@ -22,9 +23,8 @@ body {
   height: 100dvh;
   /* Center the content vertically and horizontally */
   display: grid;
-  place-content: center;
   /* Custom text and stuff */
-  background-image: url('vidss/Untitled.mp4');
+  background-image: url('vidss/1AJj.gif');
   background-position: center;
   background-size: cover;
   background-repeat: ;
@@ -37,12 +37,31 @@ body {
 
 /* A little "activation" to demonstrate JS is working in the template */
 .hero {
-  transition: background 0.5s;
+  transition: background-image 0.5s;
 }
 .hero.active {
-  background: #c6093b;
+  background:url('vidss/2151041271.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-family: Moirai One;
+ 
 }
 
+.hero.active h1{
+  color: black;
+  text-shadow: rgb (152,154,141) 1px 0 10px;;
+}
+
+h1{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 50px;
+  padding-top: 50px;
+  font-family: Moirai One;
+  color:white;
+  font-size: xx-large;
+}
 main {
   /* Make sure our content can scroll the hero away */
   min-height: 100dvh;
@@ -50,4 +69,10 @@ main {
   line-height: 1.8; /* choose a line spacing */
   font-size: 18px; /* choose a font size */
   margin: 0 auto; /* center the content */
+}
+
+body{
+  #grad {
+  background-image: linear-gradient(, yellow);
+}
 }
