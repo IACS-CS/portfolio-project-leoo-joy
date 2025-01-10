@@ -14,6 +14,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background:linear-gradient(#0a0d36, black);
 }
 
 .hero {
@@ -65,14 +66,19 @@ h1{
 main {
   /* Make sure our content can scroll the hero away */
   min-height: 100dvh;
-  max-width: 35em; /* choose a width for text */
+  max-width: 80em; /* choose a width for text */
   line-height: 1.8; /* choose a line spacing */
   font-size: 18px; /* choose a font size */
   margin: 0 auto; /* center the content */
+  background:linear-gradient(#0a0d36, black);
+  color: white;
+  font-family: Moirai One;
 }
 
-body{
-  #grad {
-  background-image: linear-gradient(, yellow);
-}
+.tot{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color:transparent;
 }
