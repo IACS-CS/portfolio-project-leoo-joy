@@ -10,3 +10,9 @@ hero.addEventListener("click", () => {
   console.log("They clicked the hero!");
   hero.classList.toggle("active");
 });
+
+let tot = document.querySelector(".tot");
+tot.addEventListener("click", () => {
+  console.log("They clicked the tots!");
+  tot.classList.toggle("active");
+});

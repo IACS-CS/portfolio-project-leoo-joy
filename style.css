@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Cookie&family=Genos:ital,wght@0,100..900;1,100..900&family=Iceland&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Megrim&family=Meow+Script&family=Moirai+One&family=Nuosu+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Cookie&family=Genos:ital,wght@0,100..900;1,100..900&family=Iceland&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Megrim&family=Meow+Script&family=Moirai+One&family=Nuosu+SIL&family=Rubik+Spray+Paint&display=swap');
+
 /* There's some sample CSS here which you can use or nuke as you like */
 
 html {
@@ -28,7 +30,7 @@ body {
   background-image: url('vidss/1AJj.gif');
   background-position: center;
   background-size: cover;
-  background-repeat: ;
+  background-repeat: no-repeat ;
 }
 .hero a {
   color: white;
@@ -68,17 +70,30 @@ main {
   min-height: 100dvh;
   max-width: 80em; /* choose a width for text */
   line-height: 1.8; /* choose a line spacing */
-  font-size: 18px; /* choose a font size */
+  font-size: 20px; /* choose a font size */
   margin: 0 auto; /* center the content */
   background:linear-gradient(#0a0d36, black);
   color: white;
   font-family: Moirai One;
 }
 
-.tot{
+.tot {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  color:transparent;
+  transition: background-image 0.5s;
+}
+
+main p{
+  font-family: Rubik Spray Paint;
+  justify-content: right;
+  padding-left: 30px;
+  max-width: 800px;
+}
+
+
+.tot.active{
+  background-image: url(vidss/open.gif);
+  background-repeat: no-repeat;
 }
