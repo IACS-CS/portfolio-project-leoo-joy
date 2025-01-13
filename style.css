@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Cookie&family=Genos:ital,wght@0,100..900;1,100..900&family=Iceland&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Megrim&family=Meow+Script&family=Moirai+One&family=Nuosu+SIL&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Cookie&family=Genos:ital,wght@0,100..900;1,100..900&family=Iceland&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Megrim&family=Meow+Script&family=Moirai+One&family=Nuosu+SIL&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Butterfly+Kids&family=Cookie&family=Genos:ital,wght@0,100..900;1,100..900&family=Iceland&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Megrim&family=Meow+Script&family=Moirai+One&family=Mynerve&family=Nuosu+SIL&family=Rubik+Spray+Paint&display=swap');
 
 /* There's some sample CSS here which you can use or nuke as you like */
 
@@ -31,6 +31,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat ;
+  position: relative;
 }
 .hero a {
   color: white;
@@ -72,9 +73,11 @@ main {
   line-height: 1.8; /* choose a line spacing */
   font-size: 20px; /* choose a font size */
   margin: 0 auto; /* center the content */
-  background:linear-gradient(#0a0d36, black);
+  background:linear-gradient(#0a0d36, rgba(0, 0, 0, 0.66));
   color: white;
   font-family: Moirai One;
+  position: relative;
+  padding-left: 100px;
 }
 
 .tot {
@@ -83,17 +86,206 @@ main {
   justify-content: flex-end;
   align-items: flex-end;
   transition: background-image 0.5s;
+  background-image: url(vidss/totoro.gif);
+  min-width: 500px;
+  min-height: 400px ;
+  background-repeat: no-repeat;
+  background-position:right;
 }
 
-main p{
-  font-family: Rubik Spray Paint;
+
+
+main p ,a{
+  font-family: Mynerve;
   justify-content: right;
   padding-left: 30px;
   max-width: 800px;
+  font-size: 20px;
 }
+
+a{
+  color:black;
+  font-size: 15px;
+}
+
+
+.card-container{
+  display: grid;
+  grid-template-columns: 270px auto;
+  row-gap: 50px;
+  column-gap: 50px;
+
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 287px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 269px;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-category {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+
+
+
 
 
 .tot.active{
   background-image: url(vidss/open.gif);
-  background-repeat: no-repeat;
+}
+
+
+
+.tore{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animateBg 50s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes animateBg{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+.tore span{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    animation: animate 3s linear infinite;
+}
+.tore span::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,#fff,transparent);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+.tore span:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 1s;
+}
+.tore span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+.tore span:nth-child(3){
+    top: 80;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+.tore span:nth-child(4){
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+.tore span:nth-child(5){
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+.tore span:nth-child(6){
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+.tore span:nth-child(7){
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+.tore span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+.tore span:nth-child(9){
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+.tore span:nth-child(9){
+    top: 0px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
 }
